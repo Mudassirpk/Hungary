@@ -1,0 +1,85 @@
+.sidebar {
+  background: #1f1d2b;
+  height: 100vh;
+  padding: 1rem 0 1rem 1rem;
+
+  .icon-box {
+    width: 5rem;
+    aspect-ratio: 1;
+    margin: 0 auto;
+
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .options {
+    margin: 2rem 0;
+
+    .option {
+      padding: 1rem 2rem 1rem 1rem;
+      border-radius: 1rem 0 0 1rem;
+      cursor: pointer;
+      position: relative;
+
+      &.selected-option {
+        background-color: #252836;
+
+        &::after,
+        &::before {
+          content: '';
+          position: absolute;
+          height: 3rem;
+          width: 3rem;
+          top: -3rem;
+          right: 0;
+          border-radius: 0 0 1rem 0;
+          border: 2rem;
+          box-shadow: 0 1rem 0 0 #252836;
+        }
+
+        &::before {
+          top: auto;
+          border-radius: 0 1rem 0 0;
+          bottom: -3rem;
+          box-shadow: 0 -1rem 0 0 #252836;
+        }
+
+        .icon-box {
+          background-color: #ea7c69;
+
+          img {
+            filter: grayscale(100%) brightness(200%);
+          }
+        }
+      }
+
+      .icon-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.5rem;
+
+        img {
+          width: 2.5rem;
+          filter: invert(57%) sepia(100%) saturate(960%) hue-rotate(319deg) brightness(101%) contrast(84%);
+        }
+
+        &:hover {
+          background: #ea7c69;
+
+          img {
+            filter: grayscale(100%) brightness(200%);
+          }
+        }
+      }
+
+      .icon-box-selected {
+        background: #ea7c69;
+      }
+    }
+  }
+}

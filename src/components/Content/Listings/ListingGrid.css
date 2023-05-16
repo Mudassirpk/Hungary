@@ -1,0 +1,118 @@
+.listing-grid {
+  width: 100%;
+  display: grid;
+  grid-row-gap: 6rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 1rem;
+  height: calc(100vh - 36rem);
+  overflow-y: scroll;
+  padding-top: 2rem;
+  padding-right: 1rem;
+}
+.listing-grid::-webkit-scrollbar {
+  width: 1rem;
+}
+.listing-grid::-webkit-scrollbar-track {
+  background: #393c49;
+  border-radius: 1rem;
+}
+.listing-grid::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: rgb(170, 168, 168);
+}
+.listing-grid .listing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background: #1f1d2b;
+  border-radius: 1rem;
+  border: 1px solid #393c49;
+}
+.listing-grid .listing .image-box {
+  position: absolute;
+  top: -2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+}
+.listing-grid .listing .image-box img {
+  width: 9rem;
+  height: 9rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.listing-grid .listing .info-box {
+  width: 100%;
+  padding: 0.5rem 0.5rem 2rem 0.5rem;
+  text-align: center;
+}
+.listing-grid .listing .info-box .title {
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.8rem;
+}
+.listing-grid .listing .info-box .price {
+  font-size: 2rem;
+  color: white;
+  margin: 1rem;
+}
+.listing-grid .listing .info-box .stock {
+  font-size: 1.5rem;
+  color: white;
+}
+
+@media (max-width: 1240px) {
+  .listing-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 1024px) {
+  .listing-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 925px) {
+  .listing-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .checkout {
+    display: none;
+  }
+}
+@media (max-width: 676px) {
+  .content-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  .listing-grid {
+    grid-template-columns: 2fr 2fr;
+  }
+}
+@media (max-width: 525px) {
+  .content {
+    padding: 1rem;
+  }
+  .listing-grid {
+    justify-content: space-around;
+    grid-template-columns: 2fr 2fr;
+  }
+  .sidebar {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  .content .content-menu .options-list {
+    gap: 1rem;
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 280px) {
+  .listing-grid {
+    grid-template-columns: 4fr;
+  }
+}
+/*# sourceMappingURL=ListingGrid.css.map */

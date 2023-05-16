@@ -1,0 +1,72 @@
+.sidebar {
+  background: #1f1d2b;
+  height: 100vh;
+  padding: 1rem 0 1rem 1rem;
+}
+.sidebar .icon-box {
+  width: 5rem;
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+.sidebar .icon-box img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.sidebar .options {
+  margin: 2rem 0;
+}
+.sidebar .options .option {
+  padding: 1rem 2rem 1rem 1rem;
+  border-radius: 1rem 0 0 1rem;
+  cursor: pointer;
+  position: relative;
+}
+.sidebar .options .option.selected-option {
+  background-color: #252836;
+}
+.sidebar .options .option.selected-option::after, .sidebar .options .option.selected-option::before {
+  content: "";
+  position: absolute;
+  height: 3rem;
+  width: 3rem;
+  top: -3rem;
+  right: 0;
+  border-radius: 0 0 1rem 0;
+  border: 2rem;
+  box-shadow: 0 1rem 0 0 #252836;
+}
+.sidebar .options .option.selected-option::before {
+  top: auto;
+  border-radius: 0 1rem 0 0;
+  bottom: -3rem;
+  box-shadow: 0 -1rem 0 0 #252836;
+}
+.sidebar .options .option.selected-option .icon-box {
+  background-color: #ea7c69;
+}
+.sidebar .options .option.selected-option .icon-box img {
+  filter: grayscale(100%) brightness(200%);
+}
+.sidebar .options .option .icon-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+.sidebar .options .option .icon-box img {
+  width: 2.5rem;
+  filter: invert(57%) sepia(100%) saturate(960%) hue-rotate(319deg) brightness(101%) contrast(84%);
+}
+.sidebar .options .option .icon-box:hover {
+  background: #ea7c69;
+}
+.sidebar .options .option .icon-box:hover img {
+  filter: grayscale(100%) brightness(200%);
+}
+.sidebar .options .option .icon-box-selected {
+  background: #ea7c69;
+}
+/*# sourceMappingURL=Sidebar.css.map */
