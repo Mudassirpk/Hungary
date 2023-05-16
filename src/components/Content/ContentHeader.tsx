@@ -1,5 +1,10 @@
 import React from "react";
+
+// icons
 import { BiSearch } from "react-icons/bi";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+//
 
 type Props = {};
 
@@ -14,6 +19,10 @@ function ContentHeader({}: Props) {
         <div className="search-box">
           <BiSearch />
           <input placeholder="search for food, coffee etc" type="text" />
+        </div>
+        <div className="menu-icons">
+          <RxHamburgerMenu className="hb-icon" />
+          <AiOutlineShoppingCart className="cart-icon" />
         </div>
       </div>
     </div>

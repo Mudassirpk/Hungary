@@ -31,7 +31,7 @@ const OrderedItem = (props: Props) => {
           <input type="text" placeholder="A little more spicy.." />
         </div>
         <div className="delete">
-            <AiOutlineDelete />
+          <AiOutlineDelete />
         </div>
       </div>
     </div>
